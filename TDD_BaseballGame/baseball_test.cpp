@@ -18,12 +18,13 @@ public:
     }
 };
 
-TEST_F(BaseballFixture, ThrowExceptionWhenInputLenghtIsUnmatched) {
+TEST_F(BaseballFixture, ThrowExceptionWhenInvalidCases) {
     assertIllegalArgument("12");
+    assertIllegalArgument("12s");
+    assertIllegalArgument("121");
 }
 
-TEST_F(BaseballFixture, ThrowExceptionWhenInvalidChar) {
-    assertIllegalArgument("12s");
-}
+//TEST_F(BaseballFixture, ThrowExceptionWhenInvalidChar) {
+//}
 
 
