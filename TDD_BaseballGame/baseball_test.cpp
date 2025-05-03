@@ -18,10 +18,15 @@ public:
     }
 };
 
-TEST_F(BaseballFixture, ThrowExceptionWhenInvalidCases) {
+TEST_F(BaseballFixture, ThrowExceptionWhenInvalidCases0) {
     assertIllegalArgument("12");
     assertIllegalArgument("12s");
+    assertIllegalArgument("12t");
     assertIllegalArgument("121");
+}
+
+TEST_F(BaseballFixture, ThrowExceptionWhenInvalidCases1) {
+    assertIllegalArgument("12t");
 }
 
 TEST_F(BaseballFixture, ReturnSolvedResultIfMatchedNumber) {
